@@ -25,12 +25,16 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-<!--        <projectConfigurable groupId="tools" displayName="test" id="test.id" instance="com.geek45.plugin.ui.DemoUI"-->
+<!--        <projectConfigurable groupId="tools" displayName="test" id="test.id" instance="com.geek45.plugin.factory.ReadFactory" />-->
+        <toolWindow factoryClass="com.geek45.plugin.factory.ReadFactory" id="tools" secondary="false" anchor="right"/>
     </extensions>
 
     <actions>
         <action class="com.geek45.plugin.action.MyAction" id="myAction" text="action" >
             <add-to-group group-id="ToolsMenu" anchor="first" />
         </action>
+        <action class="com.geek45.plugin.action.PopupAction" id="open" text="open">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+         </action>
     </actions>
 </idea-plugin>

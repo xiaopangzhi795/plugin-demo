@@ -27,4 +27,12 @@ public class DemoUI {
             }
         });
     }
+
+    public JTextArea getTextArea1() {
+        return textArea1;
+    }
+
+    public JPanel getPanel1() {
+        return panel1;
+    }
 }
