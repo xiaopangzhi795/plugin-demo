@@ -25,7 +25,7 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
+<!--        <projectConfigurable groupId="tools" displayName="test" id="test.id" instance="com.geek45.plugin.ui.DemoUI"-->
     </extensions>
 
     <actions>
