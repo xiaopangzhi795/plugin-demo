@@ -6,8 +6,8 @@
 package com.geek45.plugin.ui;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * @ClassName: TestPanel
@@ -19,15 +19,20 @@ public class TestPanel {
     private JList list1;
     private JButton 确定Button;
     private JPanel panel1;
+    private JCheckBox serviceCheckBox;
+    private JCheckBox mapperCheckBox;
+    private JCheckBox entityCheckBox;
+    private JCheckBox controllerCheckBox;
+    private JCheckBox modelCheckBox;
 
 
     public TestPanel() {
-        确定Button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.err.println("okkk");
-            }
-        });
+        PopupMenu popupMenu = new PopupMenu();
+        MenuItem menuItem = new MenuItem();
+        menuItem.setLabel("41234");
+        popupMenu.add(menuItem);
+        serviceCheckBox.add(popupMenu);
+        确定Button.addActionListener(this::clickGenerator);
     }
 
     public JList getList1() {
@@ -40,5 +45,14 @@ public class TestPanel {
 
     public JPanel getPanel1() {
         return panel1;
+    }
+
+    private void clickGenerator(ActionEvent actionEvent) {
+        System.err.println("点击了确认按钮");
+        System.err.println(serviceCheckBox.isSelected());
+        System.err.println(entityCheckBox.isSelected());
+        System.err.println(controllerCheckBox.isSelected());
+        System.err.println(modelCheckBox.isSelected());
+        System.err.println(mapperCheckBox.isSelected());
     }
 }
